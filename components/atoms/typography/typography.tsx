@@ -52,7 +52,7 @@ export const Typography: FC<TTypography> = ({
     },
 
     {
-      "text-black": color === "default",
+      "text-rose-text": color === "default",
       "text-error": color === "error",
       "text-warning": color === "warning",
       "text-success": color === "success",
@@ -60,7 +60,7 @@ export const Typography: FC<TTypography> = ({
       "text-primary-2": color === "secondary",
       "text-grey-100": color === "ghost",
       "text-info": color === "info",
-    }
+    },
   );
 
   return match(type)

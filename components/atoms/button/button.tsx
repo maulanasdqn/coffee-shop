@@ -12,7 +12,7 @@ export const Button: FC<TButton> = ({
   ...props
 }): ReactElement => {
   const className = clsx(
-    "rounded-lg hover:opacity-80",
+    "rounded-lg hover:opacity-80 font-semibold",
     "disabled:cursor-not-allowed disabled:hover:opacity-80 disabled:bg-grey-200",
     {
       "border bg-transparent": variantType === "outline",
@@ -33,18 +33,19 @@ export const Button: FC<TButton> = ({
         variant === "info" && variantType === "outline",
     },
     {
-      "bg-primary": variant === "primary" && variantType === "solid",
-      "bg-primary-2": variant === "secondary" && variantType === "solid",
-      "bg-success": variant === "success" && variantType === "solid",
-      "bg-error": variant === "error" && variantType === "solid",
-      "bg-warning": variant === "warning" && variantType === "solid",
-      "bg-info": variant === "info" && variantType === "solid",
+      "bg-rose text-rose-base":
+        variant === "primary" && variantType === "solid",
+      "bg-rose-foam": variant === "secondary" && variantType === "solid",
+      "bg-rose-surface": variant === "success" && variantType === "solid",
+      "bg-rose-love": variant === "error" && variantType === "solid",
+      "bg-rose-gold": variant === "warning" && variantType === "solid",
+      "bg-rose-pine": variant === "info" && variantType === "solid",
     },
     {
       "text-sm px-2 py-1": size === "sm",
       "text-md px-4 py-2": size === "md",
       "text-lg px-6 py-3": size === "lg",
-    }
+    },
   );
 
   const buttonState = match(state)

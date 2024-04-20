@@ -1,25 +1,23 @@
 import type { Metadata } from "next";
 import { FC, PropsWithChildren } from "react";
-import { Montserrat } from "next/font/google";
-import { AuthProvider } from "@/libs/auth/provider";
+import { Lato } from "next/font/google";
 import "./globals.css";
 
-const monserat = Montserrat({
+const lato = Lato({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["100", "300", "400", "700", "900"],
 });
 
 export const metadata: Metadata = {
-  title: "Next Boilerplate",
-  description: "Next Boilerplate with Tailwind, Typescript and NextAuth",
+  title: "FNB Management System",
+  description:
+    "FNB Management System is a web application for managing your FNB business.",
 };
 
 const RootLayout: FC<Readonly<PropsWithChildren>> = ({ children }) => {
   return (
     <html lang="en">
-      <body className={monserat.className}>
-        <AuthProvider>{children}</AuthProvider>
-      </body>
+      <body className={lato.className}>{children}</body>
     </html>
   );
 };
