@@ -16,7 +16,7 @@ export const Button: FC<TButton> = ({
     "disabled:cursor-not-allowed disabled:hover:opacity-80 disabled:bg-grey-200",
     {
       "border bg-transparent": variantType === "outline",
-      "border-none text-white": variantType === "solid",
+      "border-none": variantType === "solid",
     },
     {
       "border-bg-primary text-primary":
@@ -33,10 +33,10 @@ export const Button: FC<TButton> = ({
         variant === "info" && variantType === "outline",
     },
     {
-      "bg-rose text-rose-base":
-        variant === "primary" && variantType === "solid",
+      "bg-rose": variant === "primary" && variantType === "solid",
       "bg-rose-foam": variant === "secondary" && variantType === "solid",
-      "bg-rose-surface": variant === "success" && variantType === "solid",
+      "bg-rose-surface text-rose-text":
+        variant === "success" && variantType === "solid",
       "bg-rose-love": variant === "error" && variantType === "solid",
       "bg-rose-gold": variant === "warning" && variantType === "solid",
       "bg-rose-pine": variant === "info" && variantType === "solid",

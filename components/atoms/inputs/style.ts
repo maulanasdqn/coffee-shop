@@ -11,7 +11,7 @@ export const className = ({ size = "sm", status = "default" }: TInput) =>
       "px-5 py-4": size === "lg",
     },
     {
-      "bg-white border-grey-200 text-grey-300 placeholder:text-grey-300":
+      "bg-rose-muted border-rose-surface text-rose-text placeholder:text-rose-text":
         status === "default" || !status,
       "bg-success-50 text-success border-success placeholder:text-success":
         status === "success",
@@ -19,5 +19,5 @@ export const className = ({ size = "sm", status = "default" }: TInput) =>
         status === "error",
       "bg-warning-50 text-warning border-warning placeholder:text-warning":
         status === "warning",
-    }
+    },
   );
